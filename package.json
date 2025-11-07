@@ -1,23 +1,16 @@
 {
-  "name": "n8n-monorepo",
-  "version": "1.119.0",
+  "name": "n8n-light",
+  "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": ">=22.16",
-    "pnpm": ">=10.18.3"
+    "node": ">=22.16"
   },
-  "packageManager": "pnpm@10.18.3",
   "scripts": {
-    "prepare": "node scripts/prepare.mjs",
-    "preinstall": "node scripts/block-npm-install.js",
-    "build": "turbo run build",
-    "build:n8n": "node scripts/build-n8n.mjs",
-    "render-build": "bash build.sh",
-    "start": "packages/cli/bin/n8n",
-    "start:tunnel": "packages/cli/bin/n8n start --tunnel"
+    "start": "n8n",
+    "build": "echo 'No build needed for CLI version'"
   },
-  "devDependencies": {
-    "@types/node": "*",
-    "pnpm": "10.18.3"
+  "dependencies": {
+    "n8n": "^1.119.0"
   }
 }
+
